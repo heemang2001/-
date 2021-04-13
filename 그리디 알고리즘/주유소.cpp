@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	// 
+	// Å×½ºÆ®
 	int nCityCount;
 	vector<long long> nCityInterval;
 	vector<long long> nPrice;
