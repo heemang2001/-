@@ -13,7 +13,7 @@ int main()
 	A[1] = 1;
 
 	scanf_s("%d %d", &N, &K);
-
+	
 	for (int i = 1; i <= N; i++)
 	{
 		if ((i >= 2) && (1==(i%2)))
