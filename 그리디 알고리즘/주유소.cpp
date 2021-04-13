@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+	// 
 	int nCityCount;
 	vector<long long> nCityInterval;
 	vector<long long> nPrice;
