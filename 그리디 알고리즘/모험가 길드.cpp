@@ -30,7 +30,7 @@ int main()
 		Fear.push_back(nTemp);
 	}
 
-	// 오름차순
+	// 오름차 순
 	sort(Fear.begin(), Fear.end());
 
 	for (int i = 0; i < Fear.size(); i++)
