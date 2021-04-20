@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\코드업">
       <UniqueIdentifier>{4000c6f5-455b-4972-a9b4-02efdb2f011a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\동빈나">
+      <UniqueIdentifier>{42499b88-7a89-48f5-8a2f-093f11da80b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ATM.cpp">
@@ -50,6 +53,12 @@
     </ClCompile>
     <ClCompile Include="리모컨.cpp">
       <Filter>소스 파일\코드업</Filter>
+    </ClCompile>
+    <ClCompile Include="곱하기 혹은 더하기.cpp">
+      <Filter>소스 파일\동빈나</Filter>
+    </ClCompile>
+    <ClCompile Include="모험가 길드.cpp">
+      <Filter>소스 파일\동빈나</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
