@@ -19,6 +19,9 @@
     <Filter Include="소스 파일\프로그래머스">
       <UniqueIdentifier>{4bb85b95-f332-437e-befd-1ce943df5c3b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\코드업">
+      <UniqueIdentifier>{4000c6f5-455b-4972-a9b4-02efdb2f011a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ATM.cpp">
@@ -38,6 +41,12 @@
     </ClCompile>
     <ClCompile Include="체육복.cpp">
       <Filter>소스 파일\프로그래머스</Filter>
+    </ClCompile>
+    <ClCompile Include="조이스틱.cpp">
+      <Filter>소스 파일\프로그래머스</Filter>
+    </ClCompile>
+    <ClCompile Include="최소대금.cpp">
+      <Filter>소스 파일\코드업</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
