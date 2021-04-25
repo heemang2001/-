@@ -14,7 +14,7 @@ int solution(string name)
     int nNameLenth = name.length();      
 
     // 오른쪽, 왼쪽 어느 방향으로 가야지 빠른가?
-    int nTurn = nNameLenth - 1;
+    int nTurn = nNameLenth - 1; // 최대 이동횟수
 
     // 커서 이동
     int nMove = 0;
@@ -24,13 +24,13 @@ int solution(string name)
         int nRightMove = name[i] - 'A';     // 오른쪽으로 이동시 
         int nLeftMove = 'Z' - name[i] + 1;  // 왼쪽으로 이동시( +1은 아래화살표눌러서 'Z'로 가는것 )
 
-        // 왼쪽으로 이동시 더 빠르면
+        // (알파벳)왼쪽으로 변환시 더 빠르면
         if (nRightMove > nLeftMove)
         {
             answer += nLeftMove;
         }
 
-        // 오른쪽으로 이동시 더빠르면
+        // (알파벳)오른쪽으로 변환시 더빠르면
         else
         {
             answer += nRightMove;
@@ -56,6 +56,7 @@ int main()
 {
     cout << solution("JEROEN") << '\n';
     cout << solution("JAN") << '\n';
+    cout << solution("ABABAAAAABA") << '\n';   
 
     return 0;
 }
