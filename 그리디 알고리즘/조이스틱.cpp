@@ -10,22 +10,52 @@ int solution(string name)
 {
     int answer = 0;
 
-    string StartName;
+    // 문자열 길이
+    int nNameLenth = name.length();      
 
-    for (int i = 0; i < name.size(); i++)
+    // 오른쪽, 왼쪽 어느 방향으로 가야지 빠른가?
+    int nTurn = nNameLenth - 1;
+
+    // 커서 이동
+    int nMove = 0;
+    
+    for (int i = 0; i < nNameLenth; i++)
     {
-        StartName += "A";
+        int nRightMove = name[i] - 'A';     // 오른쪽으로 이동시 
+        int nLeftMove = 'Z' - name[i] + 1;  // 왼쪽으로 이동시( +1은 아래화살표눌러서 'Z'로 가는것 )
+
+        // 왼쪽으로 이동시 더 빠르면
+        if (nRightMove > nLeftMove)
+        {
+            answer += nLeftMove;
+        }
+
+        // 오른쪽으로 이동시 더빠르면
+        else
+        {
+            answer += nRightMove;
+        }
+
+        // 다음 문자
+        int nNext = i + 1;
+
+        while (nNext < nNameLenth && name[nNext] == 'A')
+        {
+            nNext++; // 오른쪽 이동
+        }
+
+        nTurn = min(nTurn, i + nNameLenth - nNext + min(i, nNameLenth - nNext));
     }
 
-
-
+    answer += nTurn;
 
     return answer;
 }
 
 int main()
 {
-    solution("JEROEN");
+    cout << solution("JEROEN") << '\n';
+    cout << solution("JAN") << '\n';
 
     return 0;
 }
