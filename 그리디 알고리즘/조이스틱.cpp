@@ -44,6 +44,7 @@ int solution(string name)
             nNext++; // 오른쪽 이동
         }
 
+        // 조이스틱.jpg
         nTurn = min(nTurn, i + nNameLenth - nNext + min(i, nNameLenth - nNext));
     }
 
@@ -56,7 +57,7 @@ int main()
 {
     cout << solution("JEROEN") << '\n';
     cout << solution("JAN") << '\n';
-    cout << solution("ABABAAAAABA") << '\n';   
+    cout << solution("ABABAAAAAAABA") << '\n';   
 
     return 0;
 }

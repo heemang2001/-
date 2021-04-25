@@ -54,7 +54,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\..\캡\C\알고리즘부연\조이스틱.jpg">
+    <Image Include="조이스틱.jpg">
       <Filter>소스 파일\프로그래머스</Filter>
     </Image>
   </ItemGroup>
