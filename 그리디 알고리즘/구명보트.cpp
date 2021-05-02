@@ -13,28 +13,26 @@ int solution(vector<int> people, int limit)
 {
     sort(people.begin(), people.end());
 
+    int nPeople = people.size(); // 처음 총인원
     int answer = 0, idx = 0;
+    int nOut = 0; // 나간 사람수
 
     while (1)
-    {
-        int back = people.back();   // 최대값 
-        people.pop_back();          // 최대값 pop
-
-        if (idx > people.size() - 1)
-        {
-            answer++;
-            break;               
-        }
-
-        if (people.size() == 0)
+    { 
+        if (people.size() == 1 || idx == people.size() - 1) // 남은 사람이 혼자면 
         {
             answer++;
             break;
         }
 
+        int back = people.back();   // 최대값 
+        people.pop_back();          // 최대값 pop
+        nOut++;      
+
         if (people[idx] + back <= limit) // 최소값 + 최대값 <= limit 인가?
         {
             answer++; // 최대값 + 최소값 2명이 보트에 탐
+            nOut++;
             idx++;
         }
 
@@ -43,16 +41,28 @@ int solution(vector<int> people, int limit)
             answer++; // 최대값 혼자 보트에 탐
         }
 
-        if (idx >= people.size())
+        if (nOut >= nPeople)
         {
             break;
         }
-
-        
     }
 
     return answer;
 }
+
+//int solution(vector<int> people, int limit) {
+//    sort(people.begin(), people.end());
+//    reverse(people.begin(), people.end());
+//    int N = (int)people.size();
+//    int res = 0;
+//    for (int i = 0, j = N - 1; i <= j; i++) {
+//        if (people[i] + people[j] <= limit) {
+//            j--;
+//        }
+//        res++;
+//    }
+//    return res;
+//}
 
 int main()
 {
