@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
@@ -50,4 +51,11 @@ int solution(int n, vector<vector<int>> costs)
 	}
 
 	return answer;
+}
+
+int main()
+{
+	cout << solution(4, { {0,1,1},{0,2,2},{1,2,5},{1,3,1},{2,3,8} }) << '\n';
+
+	return 0;
 }
