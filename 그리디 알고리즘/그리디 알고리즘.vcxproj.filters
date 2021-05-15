@@ -67,6 +67,9 @@
     <ClCompile Include="섬 연결하기.cpp">
       <Filter>소스 파일\프로그래머스</Filter>
     </ClCompile>
+    <ClCompile Include="단속카메라.cpp">
+      <Filter>소스 파일\프로그래머스</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="조이스틱.jpg">
