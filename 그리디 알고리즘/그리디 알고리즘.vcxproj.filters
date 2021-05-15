@@ -70,6 +70,12 @@
     <ClCompile Include="단속카메라.cpp">
       <Filter>소스 파일\프로그래머스</Filter>
     </ClCompile>
+    <ClCompile Include="로프.cpp">
+      <Filter>소스 파일\백준</Filter>
+    </ClCompile>
+    <ClCompile Include="전자레인지.cpp">
+      <Filter>소스 파일\백준</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="조이스틱.jpg">
