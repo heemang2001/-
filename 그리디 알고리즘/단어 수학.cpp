@@ -2,8 +2,6 @@
 #include <vector>
 #include <algorithm>
 
-// A = 9, B = 4, C = 8, D = 6, E = 5, F = 3, G = 7
-
 using namespace std;
 
 int N;
@@ -15,7 +13,31 @@ int solution(vector<string>& vecString)
 
 	for (int i = 0; i < vecString.size(); i++)
 	{
+		string sTemp = vecString[i];
+		int lengh = sTemp.length();
+		int pow = 1;
 
+		for (int j = lengh - 1; j >= 0; j--)
+		{
+			int nTemp = sTemp[j] - 'A';
+			alpha[nTemp] = alpha[nTemp] + pow;
+			pow = pow * 10;
+		}
+	}
+
+	sort(alpha, alpha + 26, greater<int>());
+
+	int Number = 9;
+
+	for (int i = 0; i < 26; i++)
+	{
+		if (alpha[i] == 0)
+		{
+			break;
+		}
+
+		answer = answer + (alpha[i] * Number);
+		Number--;
 	}
 
 	return answer;
