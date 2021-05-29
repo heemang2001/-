@@ -23,7 +23,7 @@ int main()
 		return 0;
 	}
 
-	for (int i = 0; i < N; ++i)
+	for (int i = 0; i < N; i++)
 	{
 		int a;
 		cin >> a;
