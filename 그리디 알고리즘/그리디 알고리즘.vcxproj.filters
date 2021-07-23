@@ -115,6 +115,9 @@
     <ClCompile Include="최고의 피자.cpp">
       <Filter>소스 파일\코드업</Filter>
     </ClCompile>
+    <ClCompile Include="문서 검색.cpp">
+      <Filter>소스 파일\백준</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="조이스틱.jpg">
