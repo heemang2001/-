@@ -6,11 +6,11 @@
 
 using namespace std;
 
-int N, M, S;
-int sum;
-int answer;
+long long N, M, S;
+long long sum;
+long long answer;
 
-bool Compare(pair<int, int> n1, pair<int, int> n2)
+bool Compare(pair<long long, long long> n1, pair<long long, long long> n2)
 {
 	return n1.first - n1.second < n2.first - n2.second;
 }
@@ -19,12 +19,12 @@ int main()
 {
 	cin >> N >> M >> S;
 
-	vector<pair<int, int>> vecMap;	
+	vector<pair<long long, long long>> vecMap;	
 
-	for (int i = 0; i < N; i++)
+	for (long long i = 0; i < N; i++)
 	{
-		int nTemp1;
-		int nTemp2;
+		long long nTemp1;
+		long long nTemp2;
 
 		cin >> nTemp1 >> nTemp2;
 
@@ -33,8 +33,8 @@ int main()
 
 	sort(vecMap.begin(), vecMap.end(), Compare);
 
-	priority_queue<int> q;
-	for (int i = 0; i < N; i++)
+	priority_queue<long long> q;
+	for (long long i = 0; i < N; i++)
 	{
 		q.push(-vecMap[i].second);
 		sum += vecMap[i].second;
@@ -48,9 +48,9 @@ int main()
 		vecMap[i].second = sum;
 	}
 
-	priority_queue<int>().swap(q);
+	priority_queue<long long>().swap(q);
 	sum = 0;
-	for (int i = N; --i >= 0;)
+	for (long long i = N; --i >= 0;)
 	{
 		q.push(-vecMap[i].first);
 		sum += vecMap[i].first;
@@ -61,7 +61,7 @@ int main()
 			q.pop();
 		}
 
-		answer = max(answer, sum + (i ? vecMap[i - 1].second : 0));
+		answer = max(answer, sum + (i ? vecMap[i - 1].second : 0LL));
 	}
 
 	cout << answer << '\n';
