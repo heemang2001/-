@@ -136,6 +136,9 @@
     <ClCompile Include="Project Teams.cpp">
       <Filter>소스 파일\백준</Filter>
     </ClCompile>
+    <ClCompile Include="과제.cpp">
+      <Filter>소스 파일\백준</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="조이스틱.jpg">
