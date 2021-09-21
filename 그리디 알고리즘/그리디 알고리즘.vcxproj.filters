@@ -157,6 +157,9 @@
     <ClCompile Include="컵라면.cpp">
       <Filter>소스 파일\백준</Filter>
     </ClCompile>
+    <ClCompile Include="동전 뒤집기.cpp">
+      <Filter>소스 파일\백준</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="조이스틱.jpg">
