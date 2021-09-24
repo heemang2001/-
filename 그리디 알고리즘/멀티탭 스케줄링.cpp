@@ -64,6 +64,7 @@ int main(void)
 		for (int j = 0; j < N; j++)
 		{
 			int lastIdx = 0;
+
 			for (int k = i + 1; k < K; k++)
 			{
 				if (plug[j] == schedule[k])
